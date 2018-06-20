@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Team from './Team';
-
+import './Group.css';
 class Group extends Component {
     
   render() {
@@ -13,13 +13,14 @@ class Group extends Component {
         )
     });
     return (
-        <div className="row">
+        <div className="row fifa-group">
             <div className="col-12">
                 <h2>{ this.props.group.letter }</h2>
-                <div className="row">
-                    { teams }
-                </div>
             </div>
+            <div className="row">
+                { teams }
+            </div>
+            
 
         </div>
     );

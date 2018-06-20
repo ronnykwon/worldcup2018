@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import {Group, Team} from '../containers/index';
 import { connect } from 'react-redux'
 import { fetchGroups } from '../../actions/action';
+
 class Home extends Component {
     constructor(props){
         super(props);
@@ -13,7 +14,6 @@ class Home extends Component {
     }
 
   render() {
-      console.log(JSON.stringify(this.props));
       const groupItems = this.props.groups.map( (group, i) => {
         return ( <div className="col-6"> <Group group={group.group}/></div>);
       });
@@ -27,9 +27,15 @@ class Home extends Component {
 
   }
 
+  // on récupère les données depuis l'API et on envoie le résultat dans le dispatcher (fetchGroups)
+  // componentDidMount est automatiquement exécuté par React
   componentDidMount() {
+      // on charge les données depuis l'api 
       fetch("http://worldcup.sfg.io/teams/group_results")
+      // ca renvoie du json donc on convertit le résultat en json
       .then(res => res.json())
+      // ensuite on traite le résultat, on va notifier via redux que l'on a reçu des données
+      // ici les informations des différents groupes 
       .then(
           (result) => {
               this.props.dispatch(fetchGroups(result));
@@ -37,6 +43,7 @@ class Home extends Component {
       )
   }
 }
+
 
 const mapStateToProps = state => {
     return {

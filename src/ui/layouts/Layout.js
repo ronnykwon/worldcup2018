@@ -14,6 +14,7 @@ class Layout extends Component {
                 </li>
             </ul>
         <div>
+            {/* C'est ici qu'on charge le composant en fonction de l'url qui a été demandée (voir App.js, composant Route) */}
             {this.props.children}
         </div>
       </div>
