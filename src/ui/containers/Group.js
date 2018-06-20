@@ -16,12 +16,10 @@ class Group extends Component {
         <div className="row fifa-group">
             <div className="col-12">
                 <h2>{ this.props.group.letter }</h2>
+                <div className="row">
+                    { teams }
+                </div>
             </div>
-            <div className="row">
-                { teams }
-            </div>
-            
-
         </div>
     );
   }
