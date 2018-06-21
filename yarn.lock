@@ -4520,6 +4520,16 @@ mkdirp@0.5.1, mkdirp@0.5.x, mkdirp@^0.5.0, mkdirp@^0.5.1, mkdirp@~0.5.0, mkdirp@
   dependencies:
     minimist "0.0.8"
 
+moment-timezone@^0.5.20:
+  version "0.5.20"
+  resolved "https://registry.yarnpkg.com/moment-timezone/-/moment-timezone-0.5.20.tgz#fe66da425dd9f9bbf416f131bf17659680aabb99"
+  dependencies:
+    moment ">= 2.9.0"
+
+"moment@>= 2.9.0", moment@^2.22.2:
+  version "2.22.2"
+  resolved "https://registry.yarnpkg.com/moment/-/moment-2.22.2.tgz#3c257f9839fc0e93ff53149632239eb90783ff66"
+
 ms@2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/ms/-/ms-2.0.0.tgz#5608aeadfc00be6c2901df5f9861788de0d597c8"
@@ -5598,6 +5608,10 @@ react-fontawesome@^1.6.1:
 react-loading@^2.0.2:
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/react-loading/-/react-loading-2.0.2.tgz#bc6d908fa316e1ccd677b7567792049a9bb4be0d"
+
+react-moment@^0.7.7:
+  version "0.7.7"
+  resolved "https://registry.yarnpkg.com/react-moment/-/react-moment-0.7.7.tgz#b509bd903de1c984d54c4c5d54bd5bfd007490a6"
 
 react-redux@^5.0.7:
   version "5.0.7"
