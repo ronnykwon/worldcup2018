@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 import { fetchGroups } from '../../actions/action';
 import ReactLoading from "react-loading";
 
-class Home extends Component {
+class Groups extends Component {
     constructor(props){
         super(props);
         this.state = {
@@ -63,4 +63,4 @@ const mapStateToProps = state => {
     }
 }
 
-export default connect(mapStateToProps)(Home);
+export default connect(mapStateToProps)(Groups);

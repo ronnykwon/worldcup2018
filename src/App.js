@@ -3,7 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import Layout from './ui/layouts/Layout';
 import { BrowserRouter, Route } from 'react-router-dom'
-import { Home, Matches, TeamDetail } from './ui/components/index';
+import { Groups, Matches, TeamDetail, Coming } from './ui/components/index';
 import store from './store/store';
 import { Provider } from 'react-redux';
 
@@ -38,8 +38,8 @@ class App extends Component {
                 C'est ce qui permet d'injecter le rendu de Home à cet endroit
                 */
               }
-              <Route exact path="/" component={Home} />
-              <Route path="/matches" component={Matches} />
+              <Route exact path="/" component={Coming} />
+              <Route path="/groups" component={Groups} />
               <Route path="/team/:code" component={TeamDetail} />
             </Layout>
         </Provider>

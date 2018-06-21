@@ -7,7 +7,10 @@ class Layout extends Component {
         <div>
             <ul className="nav justify-content-center">
                 <li className="nav-item">
-                    <Link className="nav-link" to={'/'}>Home</Link>
+                    <Link className="nav-link" to={'/'}>Programme</Link>
+                </li>
+                <li className="nav-item">
+                    <Link className="nav-link" to={'/groups'}>Groupes</Link>
                 </li>
                 <li className="nav-item">
                     {/*<Link className="nav-link" to={'/matches'}>Matches (not working)</Link>*/}

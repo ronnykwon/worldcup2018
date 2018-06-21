@@ -12,9 +12,15 @@ export default (state = initialState, action) => {
     case constants.GROUPS_RECEIVED:
       updated['groups'] = action.groups
       return updated
-  case constants.TEAM_RECEIVED:
+    case constants.TEAM_RECEIVED:
       updated['team'] = action.team
       return updated
+    case constants.MATCH_TODAY_RECEIVED:
+      updated['matchesToday'] = action.matchesToday;
+      return updated;
+      case constants.MATCH_TOMORROW_RECEIVED:
+      updated['matchesTomorrow'] = action.matchesTomorrow;
+      return updated;
     default:
       return state
     }

@@ -1,9 +1,10 @@
-import Home from './Home';
+import Groups from './Groups';
 import Matches from './Matches';
 import TeamDetail from './TeamDetail';
-
+import Coming from './Coming';
 export {
-    Home,
+    Coming,
+    Groups,
     Matches,
     TeamDetail
 }

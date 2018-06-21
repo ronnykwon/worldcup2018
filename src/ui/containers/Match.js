@@ -5,6 +5,7 @@ import './Match.css';
 import 'moment/locale/fr';
 import Moment from 'react-moment';
 import { Link } from 'react-router-dom';
+
 class Match extends Component {
     
   render() {
@@ -13,12 +14,15 @@ class Match extends Component {
         sameDay : '[Aujourd\'hui à] LT',
         nextDay : '[Demain à] LT',
         lastWeek : 'dddd [dernier à] LT',
-        nextWeek : 'dddd [at] LT',
+        nextWeek : 'dddd [à] LT',
         sameElse : 'L'
     };
 
-    let bgColor = 'bg-secondary';
+    let bgColor = 'bg-primary';
+    let awayScore, homeScore;
     if(this.props.match.status === 'completed') {
+        awayScore = (<div><FontAwesome name="futbol"/> {this.props.match.away_team.goals}</div>)
+        homeScore = (<div><FontAwesome name="futbol"/> {this.props.match.home_team.goals}</div>)
         if(this.props.match.winner_code === this.props.code)
             bgColor = 'bg-success';
         else
@@ -33,12 +37,15 @@ class Match extends Component {
                 <div className="card-text row">
                 <div className="col-5">
                 <Link className="team-link" to={`/team/${this.props.match.home_team.code}`}>{this.props.match.home_team.country}</Link>
+                {homeScore}
+
             </div>
             <div className="col">
                 VS
             </div>
             <div className="col-5">
             <Link className="team-link" to={`/team/${this.props.match.away_team.code}`}>{this.props.match.away_team.country}</Link>
+            {awayScore}
             </div>
                 </div>
             </div>
