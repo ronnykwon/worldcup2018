@@ -41,7 +41,7 @@ class Home extends Component {
   // componentDidMount est automatiquement exécuté par React
   componentDidMount() {
       // on charge les données depuis l'api 
-      fetch("http://worldcup.sfg.io/teams/group_results")
+      fetch("https://world-cup-json.herokuapp.com/teams/group_results")
       // ca renvoie du json donc on convertit le résultat en json
       .then(res => res.json())
       // ensuite on traite le résultat, on va notifier via redux que l'on a reçu des données

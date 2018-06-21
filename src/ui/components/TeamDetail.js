@@ -40,7 +40,7 @@ class TeamDetail extends Component {
   componentDidMount() {
     // on charge les données depuis l'api 
     console.log(`didmount with : ${this.props.match.params.code}`);
-    fetch(`http://worldcup.sfg.io/matches/country?fifa_code=${this.props.match.params.code}`)
+    fetch(`https://world-cup-json.herokuapp.com/matches/country?fifa_code=${this.props.match.params.code}`)
     // ca renvoie du json donc on convertit le résultat en json
     .then(res => res.json())
     // ensuite on traite le résultat, on va notifier via redux que l'on a reçu des données
