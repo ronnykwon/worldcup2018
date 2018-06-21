@@ -21,7 +21,6 @@ class App extends Component {
         </header>
         {/* Provider est utilisé par 'Redux' qui est un système pour passer des données entre les composants */}
         <Provider store={store}>
-          <BrowserRouter>
             {
               /*
               Le composant Layout représente la navigation (ou bien le menu)
@@ -43,7 +42,6 @@ class App extends Component {
               <Route path="/matches" component={Matches} />
               <Route path="/team/:code" component={TeamDetail} />
             </Layout>
-          </BrowserRouter>
         </Provider>
       </div>
     );
