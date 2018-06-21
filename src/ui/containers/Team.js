@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import FlagIcon from '../../FlagIcon';
 import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
 class Team extends Component {
     
   render() {
@@ -27,4 +28,10 @@ Team.propTypes = {
     })
 }
 
-export default Team;
+const mapStateToProps = state => {
+  return {
+      teams : state.worldcup.teams
+  }
+}
+
+export default connect(mapStateToProps)(Team);

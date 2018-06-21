@@ -4,7 +4,7 @@ import FontAwesome from 'react-fontawesome';
 import './Match.css';
 import 'moment/locale/fr';
 import Moment from 'react-moment';
-
+import { Link } from 'react-router-dom';
 class Match extends Component {
     
   render() {
@@ -32,13 +32,13 @@ class Match extends Component {
                 <h5 className="card-title"><FontAwesome name="calendar"/>  <Moment locale="fr" calendar={calendarStrings}>{this.props.match.datetime}</Moment></h5>
                 <div className="card-text row">
                 <div className="col-5">
-                {this.props.match.home_team.country}
+                <Link className="team-link" to={`/team/${this.props.match.home_team.code}`}>{this.props.match.home_team.country}</Link>
             </div>
             <div className="col">
                 VS
             </div>
             <div className="col-5">
-                {this.props.match.away_team.country}
+            <Link className="team-link" to={`/team/${this.props.match.away_team.code}`}>{this.props.match.away_team.country}</Link>
             </div>
                 </div>
             </div>

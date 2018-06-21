@@ -18,12 +18,14 @@ class TeamDetail extends Component {
   render() {
       console.log(this.props.team);
       if (this.state.isLoaded) {
+            const countryTeam = this.props.teams.filter( t => t.fifa_code === this.props.match.params.code)[0].country;
             const matches = this.props.team.map( (match, i) => 
             {
                 return (<Match match={match} code={this.props.match.params.code}/>)
             });
             return (
-                <div>
+                <div className="container-fluid">
+                    <h2>{countryTeam}</h2>
                     {matches}
                 </div>
             );
@@ -58,7 +60,8 @@ class TeamDetail extends Component {
 
 const mapStateToProps = state => {
   return {
-      team : state.worldcup.team
+      team : state.worldcup.team,
+      teams: state.worldcup.teams
   }
 }
 

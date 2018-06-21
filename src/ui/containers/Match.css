@@ -1,3 +1,8 @@
 .match {
     margin-bottom: 1em;
 }
+
+.team-link:hover, .team-link:visited, .team-link:link, .team-link:active {
+    color: #000000;
+    text-decoration: none;
+}
