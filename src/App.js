@@ -3,7 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import Layout from './ui/layouts/Layout';
 import { BrowserRouter, Route } from 'react-router-dom'
-import { Home, Matches } from './ui/components/index';
+import { Home, Matches, TeamDetail } from './ui/components/index';
 import store from './store/store';
 import { Provider } from 'react-redux';
 
@@ -41,6 +41,7 @@ class App extends Component {
               }
               <Route exact path="/" component={Home} />
               <Route path="/matches" component={Matches} />
+              <Route path="/team/:code" component={TeamDetail} />
             </Layout>
           </BrowserRouter>
         </Provider>

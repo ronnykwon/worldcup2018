@@ -1,11 +1,11 @@
 import { createStore, combineReducers, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
-import groupReducer from '../reducers/groupReducer';
+import worldcupReducer from '../reducers/worldcupReducer';
 
 // contient l'état de l'application avec ses données
 const store = createStore(
     combineReducers({
-       groups: groupReducer 
+       worldcup: worldcupReducer
     }),
     applyMiddleware(thunk)
 );

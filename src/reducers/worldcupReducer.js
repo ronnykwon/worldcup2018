@@ -13,7 +13,9 @@ export default (state = initialState, action) => {
     case constants.GROUPS_RECEIVED:
       updated['groups'] = action.groups
       return updated
-
+  case constants.TEAM_RECEIVED:
+      updated['team'] = action.team
+      return updated
     default:
       return state
     }

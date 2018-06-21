@@ -10,7 +10,7 @@ class Layout extends Component {
                     <Link className="nav-link" to={'/'}>Home</Link>
                 </li>
                 <li className="nav-item">
-                    <Link className="nav-link" to={'/matches'}>Matches (not working)</Link>
+                    {/*<Link className="nav-link" to={'/matches'}>Matches (not working)</Link>*/}
                 </li>
             </ul>
         <div>

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import {Group, Team} from '../containers/index';
 import { connect } from 'react-redux'
 import { fetchGroups } from '../../actions/action';
+import ReactLoading from "react-loading";
 
 class Home extends Component {
     constructor(props){
@@ -14,16 +15,25 @@ class Home extends Component {
     }
 
   render() {
-      const groupItems = this.props.groups.map( (group, i) => {
-        return ( <div className="col-6"> <Group group={group.group}/></div>);
-      });
-    return (
-        <div className="container-fluid">
-            <div className="row">
-                { groupItems }    
+      if(this.state.isLoaded)
+      {
+        const groupItems = this.props.groups.map( (group, i) => {
+            return ( <div className="col-6"> <Group group={group.group}/></div>);
+        });
+        return (
+            <div className="container-fluid">
+                <div className="row">
+                    { groupItems }    
+                </div>
             </div>
-        </div>
-    );
+        );
+    } else {
+        return(
+            <div className="d-flex justify-content-center">
+                <ReactLoading type="bubbles" color="black" />
+            </div>
+        )
+    }
 
   }
 
@@ -38,6 +48,8 @@ class Home extends Component {
       // ici les informations des différents groupes 
       .then(
           (result) => {
+              // on change l'état de chargement 
+              this.state.isLoaded = true;
               this.props.dispatch(fetchGroups(result));
           }
       )
@@ -47,7 +59,7 @@ class Home extends Component {
 
 const mapStateToProps = state => {
     return {
-        groups : state.groups.groups
+        groups : state.worldcup.groups
     }
 }
 
