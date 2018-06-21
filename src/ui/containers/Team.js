@@ -7,7 +7,7 @@ class Team extends Component {
     
   render() {
         return (
-            <div className="col-6">
+            <div className="col-lg-6 col-md-12">
                 <Link to={`/team/${this.props.team.fifa_code}`}> 
                     <div>
                         <FlagIcon code={this.props.team.fifa_code.substring(0,2).toLowerCase()}/>     

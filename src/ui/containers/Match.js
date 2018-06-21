@@ -36,16 +36,16 @@ class Match extends Component {
             <div className="card-body">
                 <h5 className="card-title"><FontAwesome name="calendar"/>  <Moment locale="fr" calendar={calendarStrings}>{this.props.match.datetime}</Moment></h5>
                 <div className="card-text row">
-                <div className="col-5">
+                <div className="col-lg-5 col-md-12">
                     <FlagIcon code={this.props.match.home_team.code.substring(0,2).toLowerCase()} size="2x"/><br/>
                     <Link className="team-link" to={`/team/${this.props.match.home_team.code}`}>{this.props.match.home_team.country}</Link>
                 {homeScore}
 
             </div>
-            <div className="col">
+            <div className="col-lg-2 col-md-12">
                 VS
             </div>
-            <div className="col-5">
+            <div className="col-lg-5 col-md-12">
                 <FlagIcon code={this.props.match.away_team.code.substring(0,2).toLowerCase()} size="2x"/><br/>
                 <Link className="team-link" to={`/team/${this.props.match.away_team.code}`}>{this.props.match.away_team.country}</Link>
             {awayScore}

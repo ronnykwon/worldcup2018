@@ -18,7 +18,7 @@ class Groups extends Component {
       if(this.state.isLoaded)
       {
         const groupItems = this.props.groups.map( (group, i) => {
-            return ( <div className="col-6"> <Group group={group.group}/></div>);
+            return ( <div className="col-lg-6 col-md-12"> <Group group={group.group}/></div>);
         });
         return (
             <div className="container-fluid">
