@@ -18,7 +18,7 @@ class Match extends Component {
         sameElse : 'L'
     };
 
-    let bgColor = 'bg-primary';
+    let bgColor = 'bg-info';
     let awayScore, homeScore;
     if(this.props.match.status === 'completed') {
         awayScore = (<div><FontAwesome name="futbol"/> {this.props.match.away_team.goals}</div>)

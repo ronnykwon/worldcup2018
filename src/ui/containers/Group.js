@@ -14,7 +14,7 @@ class Group extends Component {
     });
     return (
         <div className="row fifa-group">
-            <div className="col-12">
+            <div className="col-12 border border-warning">
                 <h2>{ this.props.group.letter }</h2>
                 <div className="row">
                     { teams }
